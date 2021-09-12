@@ -1,0 +1,100 @@
+.hogehoge {
+    position: relative;
+    }
+
+.hogehoge{
+      background-color: gray;
+    }
+  
+  .hogehoge p {
+    position: absolute;
+    color: white;
+    font-weight: bold; 
+    font-size: 5em;
+    font-family :Quicksand, sans-serif;/*Google Font*/
+    top: 0;
+    left: 0;
+    top: 40%;
+    left: 30%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    }
+
+    .hogehoge .fas {/*classがfaのアイコンに対して*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        margin:0;/*余計な隙間を除く*/
+        padding:0;/*余計な隙間を除く*/
+        color: red;/*アイコン色*/
+        font-size: 60px;/*サイズ*/
+       }
+  
+  .hogehoge img {
+    width: 100%;
+    height: 600px;
+    }
+
+    .wrap {
+      display: flex;
+      align-items: center;
+      height: 300px;
+      overflow: hidden;
+    }
+    .slideshow {
+      display: flex;
+    }
+    .content {
+      font-size:30px;
+      color:white;
+      width: 230px;
+      height: 230px;
+      margin: 30px;
+      padding: 5px;
+    }
+    .content:nth-child(1) {
+      background-color: tomato;
+    }
+    .content:nth-child(2) {
+      background-color: orange;
+    }
+    .content:nth-child(3) {
+      background-color: blue;
+    }
+    .content:nth-child(4) {
+      background-color: burlywood;
+    }
+
+    .slideshow {
+      display: flex;
+      animation: loop-slide 20s infinite linear 1s both;
+    }
+    @keyframes loop-slide {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .slide-paused:hover .slideshow {
+      animation-play-state: paused;
+    }
+
+    .content-hover {
+      transition: all 0.2s;
+    }
+    .content-hover:hover {
+      transform: translateY(-20px);
+      border-radius: 0 10%;
+      box-shadow: 0 3px 10px 0 #333;
+      opacity: 0.8;
+      cursor: pointer;
+    }
